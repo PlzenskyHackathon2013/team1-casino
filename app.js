@@ -1,34 +1,28 @@
+﻿#!/bin/env node
 
 /**
  * Module dependencies.
  */
+var express = require('express');
+var server = require('./http_server');
+var log_access_routes = require('./routes/log_access');
+var login_routes = require('./routes/login');
+var list_routes = require('./routes/list');
+var bj_routes = require('./routes/bj');
 
-var express = require('express')
-  , routes = require('./routes')
-  , user = require('./routes/user')
-  , http = require('http')
-  , path = require('path');
+var http_server = new server.http_server;
 
-var app = express();
+//http_server.app.set('env', 'localhost-dev-env');
+http_server.initialize();
 
-// all environments
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+// All routes must be placed here.
 
-// development only
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
-}
+// Access Log
+//http_server.app.get('/*', log_access_routes.do_log);
+http_server.app.get('/', login_routes.get_page);
+http_server.app.get('/login', login_routes.get_page);
+http_server.app.get('/list', list_routes.get_page);
+http_server.app.get('/bj', bj_routes.get_page);
+http_server.app.post('/list', list_routes.post_page);
 
-app.get('/', routes.index);
-app.get('/users', user.list);
-
-http.createServer(app).listen(process.env.OPENSHIFT_INTERNAL_PORT, process.env.OPENSHIFT_INTERNAL_IP, function(){
-  console.log('Express server listening on port ' + app.get('port'));
-});
+http_server.start();

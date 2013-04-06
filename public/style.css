@@ -1,0 +1,252 @@
+﻿a
+{
+  text-decoration: none;
+  color: #CCCCCC;
+}
+
+input
+{
+  background-color: #000000;
+  border: 1px solid #cccccc;
+  color: #CCCCCC;
+  padding: 3px;
+}
+
+body
+{
+  font-size: 12px;
+  font-family: Arial;
+  color: #ffffff;
+  background-color: #000000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main
+{
+  text-align: center;
+  width: auto;
+  margin: 0 auto 0 auto;
+}
+
+.logo
+{
+  margin-top: 20px;
+}
+
+.login
+{
+  margin-top: 10px;
+}
+
+.games
+{
+  margin-top: 10px;
+}
+
+.games .type
+{
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.game, .logout
+{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
+  width: 140px;
+  padding: 3px;
+  border: 1px solid #CCCCCC;
+  color: #CCCCCC;
+}
+
+.chat
+{
+  right:20px;
+  top:90px;
+  position:absolute;
+  background-color:#111;
+  height:250px;
+  width:350px;
+  border-right-style:dashed;
+  border-width:2px;
+  border-left-style:dashed;
+  border-width:2px
+}
+
+.chat_msgs
+{
+  height:250px;
+}
+
+.chat_msg
+{
+  background-color:#444;
+}
+
+.logout
+{
+  margin-top: 50px;
+}
+
+.game:hover a, .game:hover, .logout:hover, .logout:hover a
+{
+  background-color: #CCCCCC;
+  color: black;
+}
+
+#player-control
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  text-align: center;
+}
+
+.button
+{
+  float: left;
+  width: 65px;
+  margin-left: 2px;
+  margin-bottom: 4px;
+  padding: 3px;
+  border: 1px solid #CCCCCC;
+  color: #CCCCCC;
+}
+
+.button:hover a, .button:hover
+{
+  background-color: #CCCCCC;
+  color: black;
+}
+
+.cards
+{
+  clear: both;
+  border: 1px solid #CCCCCC;
+  height: 80px;
+  width: 550px;
+  margin: 10px auto 10px auto;
+}
+
+.cash
+{
+  border: 1px solid green;
+  float: right;
+  margin-right: 150px;
+  width: 50px;
+  height: 50px;
+  bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.pot
+{
+  border: 1px solid red;
+  float: left;
+  margin-left: 150px;
+  width: 50px;
+  height: 50px;
+}
+
+#table
+{
+  width: 600px;
+  margin: 10px auto 10px auto;
+}
+
+#player
+{
+  position: absolute;
+  right: 4px;
+  top: 30px;
+  width: 120px;
+  text-align: center;
+}
+
+.leave
+{
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 112px;
+  margin-left: 2px;
+  margin-bottom: 4px;
+  padding: 3px;
+  border: 1px solid #CCCCCC;
+  color: #CCCCCC;
+}
+
+.leave:hover a, .leave:hover
+{
+  background-color: #CCCCCC;
+  color: black;
+}
+
+.karta
+{
+  background-image: url('./karty.png');
+  width: 41px;
+  height: 55px;
+  float: left;
+  margin: 1px;
+}
+
+.srdce2 { background-position: -3px -64px; }
+.srdce3 { background-position: -3px -125px; }
+.srdce4 { background-position: -3px -186px; }
+.srdce5 { background-position: -3px -247px; }
+.srdce6 { background-position: -3px -308px; }
+.srdce7 { background-position: -3px -369px; }
+.srdce8 { background-position: -4px -430px; }
+.srdce9 { background-position: -4px -491px; }
+.srdce10 { background-position: -4px -552px; }
+.srdceJ { background-position: -5px -614px; }
+.srdceQ { background-position: -5px -676px; }
+.srdceK { background-position: -5px -738px; }
+.srdceA { background-position: -3px -3px; }
+
+.krize2 { background-position: -102px -64px; }
+.krize3 { background-position: -102px -125px; }
+.krize4 { background-position: -102px -186px; }
+.krize5 { background-position: -102px -247px; }
+.krize6 { background-position: -103px -308px; }
+.krize7 { background-position: -103px -369px; }
+.krize8 { background-position: -104px -430px; }
+.krize9 { background-position: -104px -491px; }
+.krize10 { background-position: -103px -552px; }
+.krizeJ { background-position: -104px -614px; }
+.krizeQ { background-position: -103px -676px; }
+.krizeK { background-position: -104px -738px; }
+.krizeA { background-position: -103px -3px; }
+
+.kary2 { background-position: -53px -64px; }
+.kary3 { background-position: -53px -125px; }
+.kary4 { background-position: -53px -186px; }
+.kary5 { background-position: -53px -247px; }
+.kary6 { background-position: -53px -308px; }
+.kary7 { background-position: -53px -369px; }
+.kary8 { background-position: -54px -430px; }
+.kary9 { background-position: -54px -491px; }
+.kary10 { background-position: -54px -552px; }
+.karyJ { background-position: -55px -614px; }
+.karyQ { background-position: -55px -676px; }
+.karyK { background-position: -55px -738px; }
+.karyA { background-position: -53px -3px; }
+
+.piky2 { background-position: -153px -64px; }
+.piky3 { background-position: -153px -125px; }
+.piky4 { background-position: -153px -186px; }
+.piky5 { background-position: -153px -247px; }
+.piky6 { background-position: -153px -308px; }
+.piky7 { background-position: -153px -369px; }
+.piky8 { background-position: -154px -430px; }
+.piky9 { background-position: -154px -491px; }
+.piky10 { background-position: -154px -552px; }
+.pikyJ { background-position: -155px -614px; }
+.pikyQ { background-position: -155px -676px; }
+.pikyK { background-position: -155px -738px; }
+.pikyA { background-position: -153px -3px; }
