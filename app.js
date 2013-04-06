@@ -8,6 +8,7 @@ var express = require('express');
 var server = require('./http_server');
 var login_routes = require('./routes/login');
 var list_routes = require('./routes/list');
+var bj_routes = require('./routes/bj');
 
 var http_server = new server.http_server;
 //http_server.app.set('env', 'localhost-dev-env');
@@ -17,6 +18,7 @@ http_server.initialize();
 http_server.app.get('/', login_routes.get_page);
 http_server.app.get('/login', login_routes.get_page);
 http_server.app.get('/list', list_routes.get_page);
+http_server.app.get('/bj', bj_routes.get_page);
 http_server.app.post('/list', list_routes.post_page);
 
 http_server.start();

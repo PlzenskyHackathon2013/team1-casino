@@ -19,9 +19,9 @@ exports.get_page = function(req, res){
     */
 };
 
-exports.post_page = function(req, res){
-    var vNick = '/^([A-Za-z0-9]){3,15}$/';
-    if(vNick.test(req.body.nick)==true) // je validni nick
+exports.post_page = function(req, res) {
+    var result = req.body.nick.match(/^([a-z0-9A-Z]{3,15})$/);
+    if(result !== null)
     {
       //res.cookie('id', getPlayerID(req.body.nick));
       res.cookie('nick', req.body.nick);
