@@ -98,8 +98,23 @@ body
   color: black;
 }
 
+#player-add-pot
+{
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+  width: 162px;
+  text-align: center;
+}
+
+#player-add-pot .button
+{
+  width: 30px;
+}
+
 #player-control
 {
+  clear: both;
   margin-left: auto;
   margin-right: auto;
   width: 300px;
@@ -127,7 +142,7 @@ body
 {
   clear: both;
   border: 1px solid #CCCCCC;
-  height: 80px;
+  height: 57px;
   width: 550px;
   margin: 10px auto 10px auto;
 }
