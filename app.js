@@ -12,7 +12,8 @@ var list_actions = require('./actions/list');
 var chat_actions = require('./actions/chat');
 var bj_actions = require('./actions/bj');
 
-var server = new ultimate_server.server('localhost-dev-env');
+//var server = new ultimate_server.server('localhost-dev-env');
+var server = new ultimate_server.server();
 
 // All routes must be placed here.
 
