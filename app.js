@@ -1,4 +1,4 @@
-#!/bin/env node
+﻿#!/bin/env node
 
 /**
  * Module dependencies.
@@ -17,5 +17,6 @@ http_server.initialize();
 http_server.app.get('/', login_routes.get_page);
 http_server.app.get('/login', login_routes.get_page);
 http_server.app.get('/list', list_routes.get_page);
+http_server.app.post('/list', list_routes.post_page);
 
 http_server.start();
