@@ -63,6 +63,30 @@ body
   color: #CCCCCC;
 }
 
+.chat
+{
+  right:20px;
+  top:90px;
+  position:absolute;
+  background-color:#111;
+  height:250px;
+  width:350px;
+  border-right-style:dashed;
+  border-width:2px;
+  border-left-style:dashed;
+  border-width:2px
+}
+
+.chat_msgs
+{
+  height:250px;
+}
+
+.chat_msg
+{
+  background-color:#444;
+}
+
 .logout
 {
   margin-top: 50px;

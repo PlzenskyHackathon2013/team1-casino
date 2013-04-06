@@ -19,8 +19,10 @@ var http_server = function() {
     self.setupVariables = function() {
         if ('localhost-dev-env' === self.app.get('env')) {
             console.warn('Development environment, using 127.0.0.1');
+            
             self.app.use(express.logger('dev'));
             self.app.use(express.errorHandler());
+            
             self.ipaddress = "127.0.0.1";
             self.port      = 8080;
         } else {
@@ -76,21 +78,16 @@ var http_server = function() {
      *  the handlers.
      */
     self.initializeServer = function() {
-        self.app.use('/public', express.static(path.join(__dirname, 'public')));
-
-        if (typeof self.routes === "[object Array]") {
-            //  Add handlers for the app (from the routes).
-            for (var r in self.routes) {
-                self.app.get(r, self.routes[r]);
-            }
-        };
-
         self.app.set('views', __dirname + '/views');
         self.app.set('view engine', 'jade');
         self.app.use(express.favicon());
         self.app.use(express.bodyParser());
         self.app.use(express.methodOverride());
+        self.app.use(express.cookieParser());
+        var store = new express.session.MemoryStore;
+        self.app.use(express.session({ secret: 'whatever', store: store }));
         self.app.use(self.app.router);
+        self.app.use('/public', express.static(path.join(__dirname, 'public')));
     };
 
     /**
