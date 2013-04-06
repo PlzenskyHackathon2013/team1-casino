@@ -1,6 +1,6 @@
 ﻿a
 {
-	text-decoration: none;
+  text-decoration: none;
   color: #CCCCCC;
 }
 
@@ -14,20 +14,20 @@ input
 
 body
 {
-	font-size: 12px;
-	font-family: Arial;
+  font-size: 12px;
+  font-family: Arial;
   color: #ffffff;
-	background-color: #000000;
-	text-align: center;
-	margin: 0;
-	padding: 0;
+  background-color: #000000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .main
 {
-	text-align: center;
-	width: auto;
-	margin: 0 auto 0 auto;
+  text-align: center;
+  width: auto;
+  margin: 0 auto 0 auto;
 }
 
 .logo
@@ -69,6 +69,94 @@ body
 }
 
 .game:hover a, .game:hover, .logout:hover, .logout:hover a
+{
+  background-color: #CCCCCC;
+  color: black;
+}
+
+#player-control
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  text-align: center;
+}
+
+.button
+{
+  float: left;
+  width: 65px;
+  margin-left: 2px;
+  margin-bottom: 4px;
+  padding: 3px;
+  border: 1px solid #CCCCCC;
+  color: #CCCCCC;
+}
+
+.button:hover a, .button:hover
+{
+  background-color: #CCCCCC;
+  color: black;
+}
+
+.cards
+{
+  clear: both;
+  border: 1px solid #CCCCCC;
+  height: 80px;
+  width: 550px;
+  margin: 10px auto 10px auto;
+}
+
+.cash
+{
+  border: 1px solid green;
+  float: right;
+  margin-right: 150px;
+  width: 50px;
+  height: 50px;
+  bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.pot
+{
+  border: 1px solid red;
+  float: left;
+  margin-left: 150px;
+  width: 50px;
+  height: 50px;
+}
+
+#table
+{
+  width: 600px;
+  margin: 10px auto 10px auto;
+}
+
+#player
+{
+  position: absolute;
+  right: 4px;
+  top: 30px;
+  width: 120px;
+  text-align: center;
+}
+
+.leave
+{
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 112px;
+  margin-left: 2px;
+  margin-bottom: 4px;
+  padding: 3px;
+  border: 1px solid #CCCCCC;
+  color: #CCCCCC;
+}
+
+.leave:hover a, .leave:hover
 {
   background-color: #CCCCCC;
   color: black;
