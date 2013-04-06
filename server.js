@@ -1,14 +1,17 @@
 /**
  * Module dependencies.
  */
-var express = require('express')
-  , fs      = require('fs')
-  , path    = require('path');
+var express = require('express');
+var http      = require('http');
+var fs      = require('fs');
+var path    = require('path');
+
+
 
 /**
  * Http server
  */
-var http_server = function() {
+exports.server = function(env) {
 
     //  Scope.
     var self = this;
@@ -17,7 +20,7 @@ var http_server = function() {
      *  Set up server IP address and port # using env variables/defaults.
      */
     self.setupVariables = function() {
-        if ('localhost-dev-env' === self.app.get('env')) {
+        if ('localhost-dev-env' === self.env) {
             console.warn('Development environment, using 127.0.0.1');
             
             self.app.use(express.logger('dev'));
@@ -94,8 +97,10 @@ var http_server = function() {
      *  Initializes the sample application.
      */
     self.initialize = function() {
+        self.app = express();
         self.setupVariables();
         self.setupTerminationHandlers();
+        self.http_server = http.createServer(self.app);
         // Create the express server and routes.
         self.initializeServer();
     };
@@ -105,13 +110,12 @@ var http_server = function() {
      */
     self.start = function() {
         //  Start the app on the specific interface (and port).
-        self.app.listen(self.port, self.ipaddress, function() {
+        self.http_server.listen(self.port, self.ipaddress, function() {
             console.log('%s: Http server started on %s:%d ...',
                         Date(Date.now() ), self.ipaddress, self.port);
         });
     };
 
-    self.app = express();
-}
-
-exports.http_server = http_server;
+    self.env = env;
+    self.initialize();
+};

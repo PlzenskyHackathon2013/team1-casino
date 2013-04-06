@@ -80,6 +80,8 @@ body
 .chat_msgs
 {
   height:250px;
+  padding-left: 10px;
+  text-align: left;
 }
 
 .chat_msg
