@@ -10,6 +10,7 @@ var login_routes = require('./routes/login');
 var list_routes = require('./routes/list');
 
 var http_server = new server.http_server;
+//http_server.app.set('env', 'localhost-dev-env');
 http_server.initialize();
 
 // All routes must be placed here.

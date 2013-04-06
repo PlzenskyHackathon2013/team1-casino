@@ -17,7 +17,7 @@ var http_server = function() {
      *  Set up server IP address and port # using env variables/defaults.
      */
     self.setupVariables = function() {
-        if ('development' === self.app.get('env')) {
+        if ('localhost-dev-env' === self.app.get('env')) {
             console.warn('Development environment, using 127.0.0.1');
             self.app.use(express.logger('dev'));
             self.app.use(express.errorHandler());
