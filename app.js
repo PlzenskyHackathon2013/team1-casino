@@ -10,6 +10,7 @@ var log_access_actions = require('./actions/log_access');
 var login_actions = require('./actions/login');
 var list_actions = require('./actions/list');
 var chat_actions = require('./actions/chat');
+var bj_actions = require('./actions/bj');
 
 var http_server = new server.http_server;
 
@@ -24,6 +25,7 @@ http_server.app.get('/', login_actions.get_page);
 http_server.app.get('/login', login_actions.get_page);
 http_server.app.get('/list', list_actions.get_page);
 http_server.app.post('/list', list_actions.post_page);
+http_server.app.get('/bj', bj_actions.get_page);
 
 http_server.start();
 

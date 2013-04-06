@@ -4,36 +4,44 @@
 <meta charset="utf-8">
 <title>Casino - Black Jack</title>
 <link rel="stylesheet" href="public/style.css">
-<body>
+<script src="public/jquery.js"></script>
+<script src="public/bj.js"></script>
+<body onload="bjStart();">
+
   <div class="main">
     <div id="player">user</div>
-    <div class="leave"><a href="#">Leave game</a></div>
-    <div class="logo"><img src="static/bj.jpg"></div>
+    <div class="leave"><a onclick="return leaveGame();" href="#">Leave game</a></div>
+    <div class="logo"><img src="public/bj.jpg"></div>
     <div id="table">
       
-      <div class="cards" id="cards-crupier">
-      
-      </div>
+      <div class="cards" id="cards-crupier"></div>
       
       <div class="pot">
         Pot
-        <div id="pot">$0</div>
+        <div id="pot"></div>
       </div>
       
       <div class="cash">
         Cash
-        <div id="cash">$0</div>
+        <div id="cash"></div>
       </div>
       
-      <div class="cards" id="cards-player">
-      
-      </div>
+      <div class="cards" id="cards-player"></div>
+
+
+      <div id="player-add-pot">
+        <div>Add to pot</div>
+        <div class="button" id="b1"><a onclick="return addPut(1);" href="#">1</a></div>
+        <div class="button" id="b15"><a onclick="return addPut(15);" href="#">15</a></div>
+        <div class="button" id="b50"><a onclick="return addPut(50);" href="#">50</a></div>
+        <div class="button" id="b100"><a onclick="return addPut(100);" href="#">100</a></div>
+      </div><br><br><br>
       
       <div id="player-control">
-        <div class="button" id="bDouble"><a href="#">Double</a></div>
-        <div class="button" id="bStand"><a href="#">Stand</a></div>
-        <div class="button" id="bHit"><a href="#">Hit me</a></div>
-        <div class="button" id="bStart"><a href="#">Start</a></div>
+        <div class="button" id="bDouble"><a onclick="return controlDouble();" href="#">Double</a></div>
+        <div class="button" id="bStand"><a onclick="return controlStand();" href="#">Stand</a></div>
+        <div class="button" id="bHit"><a onclick="return controlHit();" href="#">Hit me</a></div>
+        <div class="button" id="bStart"><a onclick="return controlStart();" href="#">Start</a></div>
       </div>
       
     </div>
