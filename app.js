@@ -29,4 +29,5 @@ server.start();
 
 // Initiate chat comet
 var chat_comet = io.listen(server.http_server)
+    .of("/chat")
     .on('connection', chat_actions.on_connection);
