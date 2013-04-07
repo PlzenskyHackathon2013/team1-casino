@@ -1,6 +1,6 @@
 ﻿function bjStart()
 {
-  var ioc = io.connect('http://firstapp-casino.ph/bj');
+  var ioc = io.connect('http://firstapp-casino.ph/bj_actions');
   //var chat_comet = io.connect('http://localhost:8080');
   ioc.emit('login', { my: 'data'});
   
