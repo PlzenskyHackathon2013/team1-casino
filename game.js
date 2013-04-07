@@ -207,16 +207,12 @@ exports.GameMaster = function() {
 };
 
 GameMaster.prototype.processNewUser = function(firstConnect) {
-	var guid = my_guid();
+	var guid = firstConnect;
 	var game = new BlackJack("bj", guid);
 	game.assignPlayer(new Player());
 	game.player.id = guid;
 	game.player.name = firstConnect;
 	this.games.push(game);
-	var c_id = new clientId();
-	c_id.client_id = guid;
-
-	return c_id;
 };
 
 function s4() {
