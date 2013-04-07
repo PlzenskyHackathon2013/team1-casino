@@ -16,7 +16,7 @@ exports.on_connection = function (socket) {
     console.warn('chat commet conection active');
     
     var pl = new Player();
-    pl.cards = [new Card("srdce", "3"), new Card("krize", "3")];
+    pl.cards = [new Card("krize", "3"), new Card("srdce", "3")];
 
     var pld = new Player();
     pld.cards = [new Card("srdce", "6"), new Card("krize", "2")];
