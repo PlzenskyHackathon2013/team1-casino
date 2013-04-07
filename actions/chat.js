@@ -10,5 +10,8 @@ exports.on_connection = function (socket) {
         socket.broadcast.emit('msg', {
             text: data.text
         });
+        socket.emit('msg', {
+            text: data.text
+        });
     });
 };
