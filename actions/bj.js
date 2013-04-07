@@ -18,7 +18,7 @@ exports.on_connection = function (socket) {
     gameMaster.processNewUser(socket.id);
     
     socket.on('login', function (data) {
-        socket.emit('msg', bjc);
+        //socket.emit('msg', bjc);
     });
 };
 
