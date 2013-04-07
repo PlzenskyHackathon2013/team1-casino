@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  var chat_comet = io.connect('http://firstapp-casino.ph');
-  //var chat_comet = io.connect('http://localhost:8080');
+  var chat_comet = io.connect('http://firstapp-casino.ph/chat');
+  //var chat_comet = io.connect('http://localhost/chat:8080');
 
   chat_comet.on('msg', function (msg) {
     // replace the contents of the div 
