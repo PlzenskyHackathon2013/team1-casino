@@ -5,6 +5,8 @@
 <title>Casino - Game list</title>
 <link rel="stylesheet" href="public/style.css">
 <script src="public/jquery.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="public/list.js"></script>
 <body>
   <div class="main">
     <div class="logo"><img src="public/logo.jpg"></div>
@@ -17,8 +19,8 @@
     <div class="chat">
         <div id="chat_msgs" class="chat_msgs"></div>
         <div id="chat_msg" class="chat_msg">
-            <input type="text" size=40 type="text" value="Your comment"/>
-            <input type="button" size=40 type="text" value="Post"/>
+            <input id="chat_msg_text" type="text" size=40 type="text" value="Your comment"/>
+            <input id="chat_msg_send" type="button" size=40 type="text" value="Post"/>
         </div>
     </div>
   </div>
