@@ -120,9 +120,9 @@ function Player() {
 	this.cash = undefined;
 }
 
-function Card() {
+function Card(color, value) {
 	// string - "srdce", "piky", "krize", "kary"
-	this.color = undefined;
+	this.color = color;
 	// hodnota karty - "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"
-	this.value = undefined;
+	this.value = value;
 };
