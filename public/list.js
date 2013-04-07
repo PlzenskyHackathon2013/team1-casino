@@ -1,5 +1,5 @@
 ﻿$(document).ready(function() {
-  var chat_comet = io.connect('http://firstapp-casino.ph/chat', {'connect timesout': 500});
+  var chat_comet = io.connect('http://firstapp-casino.ph/chat', {'connect timeout': 500});
   //var chat_comet = io.connect('http://localhost/chat:8080');
 
   chat_comet.on('msg', function (msg) {
