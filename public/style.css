@@ -79,6 +79,7 @@ body
 
 .chat_msgs
 {
+  overflow-y: scroll;
   height:250px;
   padding-left: 10px;
   text-align: left;
