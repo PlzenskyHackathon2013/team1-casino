@@ -3,8 +3,11 @@ exports.on_connection = function (socket) {
     socket.emit('msg', {
         text: 'Welcome'
     });
+    socket.broadcast.emit('msg', {
+        text: 'New User Connected'
+    });
     socket.on('msg', function (data) {
-        socket.emit('msg', {
+        socket.broadcast.emit('msg', {
             text: data.text
         });
     });

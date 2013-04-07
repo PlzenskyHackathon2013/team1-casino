@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   chat_comet.on('msg', function (msg) {
     // replace the contents of the div 
-    $('#chat_msgs').html('<div>' + msg.text + '</div>');
+    $('#chat_msgs').append('<div>' + msg.text + '</div>');
   });
 
   $("#chat_msg_send").click(function() {
