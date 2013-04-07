@@ -15,26 +15,7 @@ exports.get_page = function(req, res){
 exports.on_connection = function (socket) {
     console.warn('chat commet conection active');
     
-    var pl = new Player();
-    pl.cards = [new Card("krize", "3"), new Card("srdce", "3")];
-
-    var pld = new Player();
-    pld.cards = [new Card("srdce", "6"), new Card("krize", "2")];
-    
-    var bjc = new BJackGamestate();
-    bjc.id = "id";
-  	//jmeno hry ?????
-  	bjc.name = "";
-  	// objekt Dealer s isDealer = true
-  	bjc.dealer = pl;
-  	// objekt Player
-  	bjc.player = pl;
-  	// sazky na stole
-  	bjc.pot = 100;
-  	//je hra skoncena?
-  	bjc.gameEnded = false;
-  	//vyhral hrac?
-  	bjc.playerWon = false;
+    gameMaster.processNewUser(socket.id);
     
     socket.on('login', function (data) {
         socket.emit('msg', bjc);

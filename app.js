@@ -36,3 +36,5 @@ var bj_comet = io.listen(server.http_server)
     .of("/bj_actions")
     .on('connection', bj_actions.on_connection); 
     
+var game = require('./game.js');
+var gameMaster = new game.GameMaster();
